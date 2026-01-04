@@ -53,7 +53,27 @@ Stability Reporting: Classifies features as "Stable," "Moderate Shift," or "Unst
 
 Categorical Analysis: Specifically handles category distribution shifts by comparing base and new data distributions.
 
-4. Metric Engineering Beyond Accuracy
+4.Manual Model Explainability Engine
+
+This project implements a manual feature attribution system for classification models without using SHAP, LIME, or similar libraries.
+It explains individual predictions by decomposing the model output into feature-level contributions that can be compared across samples.
+
+The implementation uses Logistic Regression, since its linear structure makes the attribution mathematically exact.
+
+Why This Exists
+
+Most explainability tools behave like black boxes themselves.
+This project shows how to build an explainability engine from first principles:
+
+No third-party explainability libraries
+
+No approximations
+
+No heuristics
+
+100% mathematically grounded
+
+5. Metric Engineering Beyond Accuracy
 File: Metric_Engineering_Beyond_Accuracy.ipynb
 
 Description
@@ -64,7 +84,7 @@ Business Risk-Adjusted Profit/Loss (BRAPL): A custom metric that assigns financi
 
 Custom Cost-Benefit Analysis: Allows users to define a dictionary of benefits and costs to calculate the actual economic impact of a model's predictions.
 
-5. Model Failure Diagnosis Without Retraining
+6. Model Failure Diagnosis Without Retraining
 File: Model_Failure_Diagnosis_Without_Retraining.ipynb
 
 Description
@@ -77,7 +97,7 @@ Drift Ranking: Ranks features by their drift score to help data scientists prior
 
 Support for Mixed Data: Handles both numerical and categorical feature sets.
 
-6. Olympic Athlete Overperformance Index (OPI)
+7. Olympic Athlete Overperformance Index (OPI)
 File: Olympic Athlete Overperformance Index.ipynb
 
 Description
